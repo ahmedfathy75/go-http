@@ -1,8 +1,11 @@
 FROM    golang:alpine as builder
+ARG branch=master
+ENV branch=$branch
+
 WORKDIR /go-projects
 RUN cd /go-projects && \
     apk update && apk add git curl && \
-    git clone https://github.com/ahmedfathy75/go-http && \
+    git clone -b ${branch} https://github.com/ahmedfathy75/go-http && \
     cd go-http && \
     go build .
 
