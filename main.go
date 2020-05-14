@@ -11,5 +11,5 @@ func main() {
 }
 // remark
 func HelloServer(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "Hello World Again Ver1.2 , %s!", r.URL.Path[1:])
+    fmt.Fprintf(w, "Hello World Again Ver1.3 , %s!", r.URL.Path[1:])
 }
