@@ -1,4 +1,4 @@
 #!/bin/bash
 echo $SOURCEREF
 echo $IMAGE_NAME
-docker build --build-arg branch=00 -t $IMAGE_NAME  .
+docker build --build-arg branch=v1.3 -t $IMAGE_NAME  .
