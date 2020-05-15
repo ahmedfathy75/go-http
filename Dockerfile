@@ -14,5 +14,5 @@ EXPOSE  8080
 RUN apk update && apk add  curl
 COPY --from=builder /go-projects/go-http/go-http /
 ENTRYPOINT [ "/go-http" ]
-HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "curl -s -f http://localhost:8080 || exit 1" ]
+HEALTHCHECK --interval=10s --timeout=30s --start-period=5s --retries=3 CMD curl  --fail http://localhost:8080/ || exit 1
 
